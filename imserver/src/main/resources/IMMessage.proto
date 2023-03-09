@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.linseven.protobuf;
+
+
+
+message IMMessage {
+
+    int32 sourceUserId =1;
+    int32  destUserId=2;
+    string content=3;
+    int32 type=4;
+    int32 groupId=5;
+    int64 sendTime=6;
+
+}
