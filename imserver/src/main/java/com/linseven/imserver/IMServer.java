@@ -1,5 +1,6 @@
 package com.linseven.imserver;
 
+import com.linseven.imserver.config.IMServerInfo;
 import com.linseven.imserver.handler.ConnectServerHandler;
 import com.linseven.imserver.handler.ServerChannelInitializer;
 import io.netty.bootstrap.ServerBootstrap;
@@ -9,6 +10,9 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import org.apache.curator.x.discovery.ServiceDiscovery;
+import org.apache.curator.x.discovery.ServiceInstance;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -23,6 +27,8 @@ import java.net.InetSocketAddress;
 @Component
 public class IMServer {
 
+    @Autowired
+    private ServiceDiscovery serviceDiscovery;
     private  int port =8082;
     EventLoopGroup boss = new NioEventLoopGroup();
     EventLoopGroup work = new NioEventLoopGroup();
@@ -39,6 +45,14 @@ public class IMServer {
         ChannelFuture channelFuturef = b.bind().sync();
         if (channelFuturef.isSuccess()){
             System.out.println("启动成功");
+            IMServerInfo imServerInfo = new IMServerInfo();
+            imServerInfo.setImPort(port);
+            imServerInfo.setImWebPort(8081);
+            imServerInfo.setImserverIp("127.0.0.1");
+            imServerInfo.setImWebServerIP("127.0.0.1");
+            ServiceInstance serviceInstance =  ServiceInstance.builder().name("imserver").payload(imServerInfo).build();
+            serviceDiscovery.registerService(serviceInstance);
+
         }
 
 
@@ -49,5 +63,6 @@ public class IMServer {
         boss.shutdownGracefully();
         work.shutdownGracefully();
         System.out.println("关闭server");
+
     }
 }
