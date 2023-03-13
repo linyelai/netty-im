@@ -28,8 +28,8 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
     protected void addInterceptors(InterceptorRegistry registry) {
 
         registry.addInterceptor(getJwtInterceptor())
-                .addPathPatterns("/**")   //其他接口保护 token验证
-                .excludePathPatterns("/login")  //所有用户接口都放行
+                .addPathPatterns("/**")
+                .excludePathPatterns("/login")
                 .excludePathPatterns("/favicon.ico");
     }
 

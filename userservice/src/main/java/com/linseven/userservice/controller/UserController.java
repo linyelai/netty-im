@@ -1,5 +1,8 @@
 package com.linseven.userservice.controller;
 
+import com.linseven.userservice.annotation.IgnoreToken;
+import com.linseven.userservice.model.UserPO;
+import com.linseven.userservice.service.UserService;
 import com.linseven.userservice.utils.JWTUtil;
 import com.linseven.userservice.utils.RedisUtil;
 import com.linseven.userservice.vo.UserVo;
@@ -7,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,6 +28,10 @@ public class UserController {
     private RedisUtil redisUtil;
     @Autowired
     private JWTUtil     jwtUtil;
+
+    @Autowired
+    private UserService userService;
+
     private static final String AUTH = "authorization Bear";
 
     @PostMapping("/login")
@@ -33,6 +41,22 @@ public class UserController {
         UserVo userVo = new UserVo();
         userVo.setUserId(userId);
         userVo.setUsername(username);
+        String token = jwtUtil.Token(userVo);
+        Response response = new Response();
+        response.setData(token);
+        return  response;
+    }
+
+
+    @PostMapping("/signUp")
+    @IgnoreToken
+    public Response signUp(@RequestBody UserPO userPO){
+
+        userService.addUser(userPO);
+        UserPO newUser = userService.findByUsername(userPO.getUsername());
+        UserVo userVo = new UserVo();
+        userVo.setUserId(newUser.getId());
+        userVo.setUsername(newUser.getUsername());
         String token = jwtUtil.Token(userVo);
         Response response = new Response();
         response.setData(token);

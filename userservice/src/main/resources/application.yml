@@ -11,5 +11,15 @@ spring:
         max-idle: 10
         max-wait: 100000
     timeout: 5000
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/im-user?characterEncoding=UTF-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
 server:
   port: 3001
+mybatis-plus:
+  configLocation: "classpath:mybatis/mybatis-config.xml"
+  mapperLocations: "classpath:mybatis/*Mapper.xml"
+  typeAliasesPackage: "com.linseven.userservice.model"

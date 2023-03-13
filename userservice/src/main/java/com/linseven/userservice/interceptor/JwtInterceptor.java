@@ -1,5 +1,6 @@
 package com.linseven.userservice.interceptor;
 
+import com.alibaba.fastjson.JSON;
 import com.linseven.userservice.annotation.IgnoreToken;
 import com.linseven.userservice.controller.Response;
 import com.linseven.userservice.exception.ValidationException;
@@ -27,7 +28,7 @@ import java.lang.reflect.Method;
 public class JwtInterceptor implements HandlerInterceptor {
 
 
-    private static final String AUTH = "authorization Bear";
+    private static final String AUTH = "Authorization";
     private static final String AUTH_USER_NAME = "user-name";
 
     @Value("${spring.profiles.active}")
@@ -65,15 +66,19 @@ public class JwtInterceptor implements HandlerInterceptor {
         }
 
         String token = request.getHeader(AUTH);
-        UserVo result = (UserVo)redisUtil.get("token:"+token);
+        if (StringUtils.isEmpty(token)) {
+            throw new ValidationException("Authorization不允许为空，请重新登录");
+        }
+        token = token.substring(7,token.length());
+        JSON result = (JSON)redisUtil.get("token:"+token);
         if(result==null){
             response.setStatus(HttpStatus.UNAUTHORIZED.value());
             return false;
         }
+        //UserVo userVo = JSON.toJavaObject(result,UserVo.class);
 
-        if (StringUtils.isEmpty(token)) {
-            throw new ValidationException("Authorization不允许为空，请重新登录");
-        }
+
+
 
 
 
