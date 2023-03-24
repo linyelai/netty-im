@@ -1,0 +1,19 @@
+server:
+  port: 3003
+spring:
+  application:
+    name: chatService
+  kafka:
+    consumer:
+      bootstrap-servers:
+        - 127.0.0.1:9092
+      # 消费组
+      group-id: chatService
+      # 消费者是否自动提交偏移量，默认为true
+      enable-auto-commit: false
+      # 消费者在读取一个没有偏移量或者偏移量无效的情况下，从起始位置读取partition的记录，默认是latest
+      auto-offset-reset: earliest
+      # 单次调用poll方法能够返回的消息数量
+      max-poll-records: 50
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
