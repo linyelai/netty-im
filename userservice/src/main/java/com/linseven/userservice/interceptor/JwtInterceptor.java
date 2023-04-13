@@ -36,6 +36,8 @@ public class JwtInterceptor implements HandlerInterceptor {
     @Autowired
     private RedisUtil redisUtil;
 
+    private ThreadLocal<UserVo> userVoThreadLocal = new ThreadLocal<>();
+
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -75,8 +77,11 @@ public class JwtInterceptor implements HandlerInterceptor {
             response.setStatus(HttpStatus.UNAUTHORIZED.value());
             return false;
         }
-        //UserVo userVo = JSON.toJavaObject(result,UserVo.class);
-
+        UserVo userVo = JSON.toJavaObject(result,UserVo.class);
+        UserVo userVo1 = userVoThreadLocal.get();
+        if(userVo1==null){
+            userVoThreadLocal.set(userVo);
+        }
 
 
 
