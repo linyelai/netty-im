@@ -24,7 +24,7 @@ public class MsgSender implements Runnable {
         // get user whether online
         UserService userService = new UserService() ;
         IMServerInfo friendInfo = userService.getUserOnlineIMServerInfo(targetUserId);
-       IMServerInfo ownerInfo = AppContext.getContext().getImServerInfo();
+        IMServerInfo ownerInfo = AppContext.getContext().getImServerInfo();
 
         while(true){
 
@@ -36,11 +36,15 @@ public class MsgSender implements Runnable {
                 IMMessageOuterClass.IMMessage imMessage = IMMessageOuterClass.IMMessage.newBuilder().setType(IMMessageOuterClass.MsgType.text).setDestId(targetUserId).setContent(msg).setSourceId(username).build();
 
                 channel.writeAndFlush(imMessage);
+            }else if(friendInfo!=null){
+                //发送到web translate
+
             }else{
-                //发送到web
-
+                //发送到离线服务
             }
-
+            synchronized (AppContext.class) {
+                AppContext.class.wait();
+            }
 
         }
     }

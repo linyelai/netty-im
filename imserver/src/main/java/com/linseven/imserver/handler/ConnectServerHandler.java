@@ -56,6 +56,9 @@ public class ConnectServerHandler extends ChannelInboundHandlerAdapter {
 
         }
 
+        IMMessageOuterClass.IMMessage ackMsg = IMMessageOuterClass.IMMessage.newBuilder().setType(IMMessageOuterClass.MsgType.ack).setMsgId(imMessage.getMsgId()).build();
+        ctx.channel().writeAndFlush(ackMsg);
+
     }
 
     @Override

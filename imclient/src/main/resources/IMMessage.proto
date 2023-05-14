@@ -13,6 +13,7 @@ enum MsgType {
   newMsgSync = 6;
   makeFriend = 7;
   connect = 8;
+  ack = 9;
 }
 message IMMessage {
 

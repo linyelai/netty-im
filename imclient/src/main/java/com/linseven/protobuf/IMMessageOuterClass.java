@@ -55,6 +55,10 @@ public final class IMMessageOuterClass {
      * <code>connect = 8;</code>
      */
     connect(8),
+    /**
+     * <code>ack = 9;</code>
+     */
+    ack(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -94,6 +98,10 @@ public final class IMMessageOuterClass {
      * <code>connect = 8;</code>
      */
     public static final int connect_VALUE = 8;
+    /**
+     * <code>ack = 9;</code>
+     */
+    public static final int ack_VALUE = 9;
 
 
     public final int getNumber() {
@@ -129,6 +137,7 @@ public final class IMMessageOuterClass {
         case 6: return newMsgSync;
         case 7: return makeFriend;
         case 8: return connect;
+        case 9: return ack;
         default: return null;
       }
     }
@@ -1418,10 +1427,10 @@ public final class IMMessageOuterClass {
       "Id\030\001 \001(\t\022\020\n\010sourceId\030\002 \001(\t\022\016\n\006destId\030\003 \001" +
       "(\t\022\017\n\007content\030\004 \001(\t\022,\n\004type\030\005 \001(\0162\036.com." +
       "linseven.protobuf.MsgType\022\017\n\007subType\030\006 \001" +
-      "(\005\022\020\n\010sendTime\030\007 \001(\003*x\n\007MsgType\022\010\n\004text\020" +
-      "\000\022\t\n\005image\020\001\022\t\n\005audio\020\002\022\t\n\005video\020\003\022\013\n\007re" +
-      "dPack\020\004\022\010\n\004file\020\005\022\016\n\nnewMsgSync\020\006\022\016\n\nmak" +
-      "eFriend\020\007\022\013\n\007connect\020\010b\006proto3"
+      "(\005\022\020\n\010sendTime\030\007 \001(\003*\201\001\n\007MsgType\022\010\n\004text" +
+      "\020\000\022\t\n\005image\020\001\022\t\n\005audio\020\002\022\t\n\005video\020\003\022\013\n\007r" +
+      "edPack\020\004\022\010\n\004file\020\005\022\016\n\nnewMsgSync\020\006\022\016\n\nma" +
+      "keFriend\020\007\022\013\n\007connect\020\010\022\007\n\003ack\020\tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -5,6 +5,7 @@ import com.linseven.protobuf.IMMessageOuterClass;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import lombok.Synchronized;
 
 /**
  * @author Tyrion
@@ -27,7 +28,15 @@ public class NewMsgHandler extends SimpleChannelInboundHandler<IMMessageOuterCla
     protected void channelRead0(ChannelHandlerContext ctx, IMMessageOuterClass.IMMessage msg)
             throws Exception {
 
-        System.out.println(msg.getContent());
+
+        IMMessageOuterClass.MsgType msgType = msg.getType();
+        if(msgType.equals(IMMessageOuterClass.MsgType.ack)){
+            synchronized (AppContext.class) {
+                AppContext.getContext().notify();
+            }
+        }else{
+            System.out.println(msg.getContent());
+        }
 
     }
 
