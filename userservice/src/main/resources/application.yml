@@ -16,7 +16,7 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
+
 server:
   port: 3001
 mybatis-plus:

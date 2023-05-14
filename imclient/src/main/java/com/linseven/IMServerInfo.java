@@ -1,4 +1,4 @@
-package com.linseven.imserver.config;
+package com.linseven;
 
 import lombok.Data;
 

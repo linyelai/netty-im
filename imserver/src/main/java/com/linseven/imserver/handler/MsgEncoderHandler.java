@@ -15,7 +15,8 @@ public class MsgEncoderHandler extends SimpleChannelInboundHandler<IMMessageOute
     protected void channelRead0(ChannelHandlerContext ctx, IMMessageOuterClass.IMMessage msg)
             throws Exception {
 
-        ctx.write(msg);
+        // ctx.write(msg);
+        ctx.fireChannelActive();
 
     }
 

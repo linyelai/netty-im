@@ -1,9 +1,14 @@
 package com.linseven.userservice.controller;
 
-import com.linseven.userservice.model.IMServerInfo;
+import com.linseven.IMServerInfo;
+import com.linseven.userservice.service.IMServerInfoService;
+import com.linseven.userservice.vo.UserVo;
+import org.apache.tomcat.jni.Thread;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author Tyrion
@@ -13,10 +18,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ServerInfoController {
 
+    @Autowired
+    private IMServerInfoService imServerInfoService;
+    @Autowired
+    private ThreadLocal<UserVo> threadLocal ;
+
     @GetMapping("/getServerInfo")
-    public IMServerInfo getServerInfo(){
+    public Response<IMServerInfo> getServerInfo(HttpServletRequest request) throws Exception {
 
+        Response response = new Response();
+        String ip = request.getRemoteAddr();
+        UserVo userVo = threadLocal.get();
+        String userId = userVo.getUserId()+"";
+        IMServerInfo imServerInfo = imServerInfoService.getServerInfo(ip,userId);
+        response.setData(imServerInfo);
+        threadLocal.remove();
+        return response;
 
-        return null;
     }
 }

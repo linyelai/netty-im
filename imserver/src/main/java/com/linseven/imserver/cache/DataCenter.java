@@ -1,5 +1,6 @@
 package com.linseven.imserver.cache;
 
+import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 
 import java.util.*;
@@ -12,7 +13,10 @@ import java.util.*;
 public class DataCenter {
 
     private final static DataCenter instance = new DataCenter();
-    private final static Map<String,ChannelHandlerContext> contextCache = new HashMap();
+    // userId -->key
+    private final static Map<String,List<Channel>> contextCache = new HashMap();
+
+    private final static Map<String,String> channelIdMapUserId = new HashMap();
 
     private DataCenter(){
 
@@ -22,32 +26,37 @@ public class DataCenter {
         return instance;
     }
 
-    public ChannelHandlerContext getContextById(String id){
+    public List<Channel> getChannels(String userId){
 
-        return contextCache.get(id);
+        return contextCache.get(userId);
     }
 
-    public void addContext(ChannelHandlerContext context){
+    public void addChannel(String userId,Channel channel){
 
-        String id = context.channel().id().toString();
-        contextCache.put(id,context);
-    }
 
-    public List<ChannelHandlerContext> getAllContext(){
-
-        List<ChannelHandlerContext> allContext = new ArrayList<>();
-
-        Set keySet = contextCache.keySet();
-        Iterator<String> iterator = keySet.iterator();
-        while(iterator.hasNext()){
-            String id = iterator.next();
-            allContext.add(contextCache.get(id));
+        List<Channel> channels =  contextCache.get(userId);
+        if(channels==null){
+            channels = new ArrayList<>();
+            channels.add(channel);
+            contextCache.put(userId,channels);
+        }else{
+            channels.add(channel);
         }
-        return allContext;
+        channelIdMapUserId.put(channel.id().toString(),userId);
+
     }
+
 
     public void removeContext(ChannelHandlerContext ctx) {
-        String id = ctx.channel().id().toString();
-        contextCache.remove(id);
+
+        String userId = channelIdMapUserId.get(ctx.channel().id().toString());
+        List<Channel> channels = contextCache.get(userId);
+        Iterator<Channel> iterator = channels.iterator();
+        while(iterator.hasNext()){
+            Channel channel = iterator.next();
+            if(channel.id().toString().equals(ctx.channel().id().toString())){
+                iterator.remove();
+            }
+        }
     }
 }

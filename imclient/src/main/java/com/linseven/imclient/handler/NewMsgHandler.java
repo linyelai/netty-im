@@ -1,5 +1,6 @@
 package com.linseven.imclient.handler;
 
+import com.linseven.imclient.AppContext;
 import com.linseven.protobuf.IMMessageOuterClass;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -13,12 +14,13 @@ import io.netty.channel.SimpleChannelInboundHandler;
 
 public class NewMsgHandler extends SimpleChannelInboundHandler<IMMessageOuterClass.IMMessage> {
 
-    private Channel channel;
+
 
 
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) {
-        channel = ctx.channel();
+
+        AppContext.getContext().setChannel(ctx.channel());
     }
 
     @Override

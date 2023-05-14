@@ -18,4 +18,9 @@ public class AppConfig {
 
         return new BCryptPasswordEncoder();
     }
+
+    @Bean
+    public  ThreadLocal threadLocal(){
+       return new ThreadLocal<>();
+    }
 }

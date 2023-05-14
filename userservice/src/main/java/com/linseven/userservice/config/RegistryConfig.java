@@ -1,4 +1,4 @@
-package com.linseven.imserver.config;
+package com.linseven.userservice.config;
 
 
 import com.linseven.IMServerInfo;

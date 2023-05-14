@@ -35,8 +35,8 @@ public class JwtInterceptor implements HandlerInterceptor {
     private String profiles;
     @Autowired
     private RedisUtil redisUtil;
-
-    private ThreadLocal<UserVo> userVoThreadLocal = new ThreadLocal<>();
+    @Autowired
+    private ThreadLocal<UserVo> threadLocal;
 
 
     @Override
@@ -78,9 +78,9 @@ public class JwtInterceptor implements HandlerInterceptor {
             return false;
         }
         UserVo userVo = JSON.toJavaObject(result,UserVo.class);
-        UserVo userVo1 = userVoThreadLocal.get();
+        UserVo userVo1 = threadLocal.get();
         if(userVo1==null){
-            userVoThreadLocal.set(userVo);
+            threadLocal.set(userVo);
         }
 
 

@@ -1,4 +1,4 @@
-package com.linseven.userservice.model;
+package com.linseven;
 
 import lombok.Data;
 

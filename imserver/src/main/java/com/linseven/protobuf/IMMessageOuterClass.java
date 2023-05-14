@@ -14,48 +14,248 @@ public final class IMMessageOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code com.linseven.protobuf.MsgType}
+   */
+  public enum MsgType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>text = 0;</code>
+     */
+    text(0),
+    /**
+     * <code>image = 1;</code>
+     */
+    image(1),
+    /**
+     * <code>audio = 2;</code>
+     */
+    audio(2),
+    /**
+     * <code>video = 3;</code>
+     */
+    video(3),
+    /**
+     * <code>redPack = 4;</code>
+     */
+    redPack(4),
+    /**
+     * <code>file = 5;</code>
+     */
+    file(5),
+    /**
+     * <code>newMsgSync = 6;</code>
+     */
+    newMsgSync(6),
+    /**
+     * <code>makeFriend = 7;</code>
+     */
+    makeFriend(7),
+    /**
+     * <code>connect = 8;</code>
+     */
+    connect(8),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>text = 0;</code>
+     */
+    public static final int text_VALUE = 0;
+    /**
+     * <code>image = 1;</code>
+     */
+    public static final int image_VALUE = 1;
+    /**
+     * <code>audio = 2;</code>
+     */
+    public static final int audio_VALUE = 2;
+    /**
+     * <code>video = 3;</code>
+     */
+    public static final int video_VALUE = 3;
+    /**
+     * <code>redPack = 4;</code>
+     */
+    public static final int redPack_VALUE = 4;
+    /**
+     * <code>file = 5;</code>
+     */
+    public static final int file_VALUE = 5;
+    /**
+     * <code>newMsgSync = 6;</code>
+     */
+    public static final int newMsgSync_VALUE = 6;
+    /**
+     * <code>makeFriend = 7;</code>
+     */
+    public static final int makeFriend_VALUE = 7;
+    /**
+     * <code>connect = 8;</code>
+     */
+    public static final int connect_VALUE = 8;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static MsgType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static MsgType forNumber(int value) {
+      switch (value) {
+        case 0: return text;
+        case 1: return image;
+        case 2: return audio;
+        case 3: return video;
+        case 4: return redPack;
+        case 5: return file;
+        case 6: return newMsgSync;
+        case 7: return makeFriend;
+        case 8: return connect;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<MsgType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        MsgType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MsgType>() {
+            public MsgType findValueByNumber(int number) {
+              return MsgType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.linseven.protobuf.IMMessageOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final MsgType[] VALUES = values();
+
+    public static MsgType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private MsgType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.linseven.protobuf.MsgType)
+  }
+
   public interface IMMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.linseven.protobuf.IMMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 sourceUserId = 1;</code>
-     * @return The sourceUserId.
+     * <code>string msgId = 1;</code>
+     * @return The msgId.
      */
-    int getSourceUserId();
+    java.lang.String getMsgId();
+    /**
+     * <code>string msgId = 1;</code>
+     * @return The bytes for msgId.
+     */
+    com.google.protobuf.ByteString
+        getMsgIdBytes();
 
     /**
-     * <code>int32 destUserId = 2;</code>
-     * @return The destUserId.
+     * <code>string sourceId = 2;</code>
+     * @return The sourceId.
      */
-    int getDestUserId();
+    java.lang.String getSourceId();
+    /**
+     * <code>string sourceId = 2;</code>
+     * @return The bytes for sourceId.
+     */
+    com.google.protobuf.ByteString
+        getSourceIdBytes();
 
     /**
-     * <code>string content = 3;</code>
+     * <code>string destId = 3;</code>
+     * @return The destId.
+     */
+    java.lang.String getDestId();
+    /**
+     * <code>string destId = 3;</code>
+     * @return The bytes for destId.
+     */
+    com.google.protobuf.ByteString
+        getDestIdBytes();
+
+    /**
+     * <code>string content = 4;</code>
      * @return The content.
      */
     java.lang.String getContent();
     /**
-     * <code>string content = 3;</code>
+     * <code>string content = 4;</code>
      * @return The bytes for content.
      */
     com.google.protobuf.ByteString
         getContentBytes();
 
     /**
-     * <code>int32 type = 4;</code>
+     * <code>.com.linseven.protobuf.MsgType type = 5;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.com.linseven.protobuf.MsgType type = 5;</code>
      * @return The type.
      */
-    int getType();
+    com.linseven.protobuf.IMMessageOuterClass.MsgType getType();
 
     /**
-     * <code>int32 groupId = 5;</code>
-     * @return The groupId.
+     * <code>int32 subType = 6;</code>
+     * @return The subType.
      */
-    int getGroupId();
+    int getSubType();
 
     /**
-     * <code>int64 sendTime = 6;</code>
+     * <code>int64 sendTime = 7;</code>
      * @return The sendTime.
      */
     long getSendTime();
@@ -73,7 +273,11 @@ public final class IMMessageOuterClass {
       super(builder);
     }
     private IMMessage() {
+      msgId_ = "";
+      sourceId_ = "";
+      destId_ = "";
       content_ = "";
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -96,33 +300,128 @@ public final class IMMessageOuterClass {
               com.linseven.protobuf.IMMessageOuterClass.IMMessage.class, com.linseven.protobuf.IMMessageOuterClass.IMMessage.Builder.class);
     }
 
-    public static final int SOURCEUSERID_FIELD_NUMBER = 1;
-    private int sourceUserId_ = 0;
+    public static final int MSGID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object msgId_ = "";
     /**
-     * <code>int32 sourceUserId = 1;</code>
-     * @return The sourceUserId.
+     * <code>string msgId = 1;</code>
+     * @return The msgId.
      */
     @java.lang.Override
-    public int getSourceUserId() {
-      return sourceUserId_;
+    public java.lang.String getMsgId() {
+      java.lang.Object ref = msgId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        msgId_ = s;
+        return s;
+      }
     }
-
-    public static final int DESTUSERID_FIELD_NUMBER = 2;
-    private int destUserId_ = 0;
     /**
-     * <code>int32 destUserId = 2;</code>
-     * @return The destUserId.
+     * <code>string msgId = 1;</code>
+     * @return The bytes for msgId.
      */
     @java.lang.Override
-    public int getDestUserId() {
-      return destUserId_;
+    public com.google.protobuf.ByteString
+        getMsgIdBytes() {
+      java.lang.Object ref = msgId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        msgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int CONTENT_FIELD_NUMBER = 3;
+    public static final int SOURCEID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sourceId_ = "";
+    /**
+     * <code>string sourceId = 2;</code>
+     * @return The sourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceId() {
+      java.lang.Object ref = sourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sourceId = 2;</code>
+     * @return The bytes for sourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceIdBytes() {
+      java.lang.Object ref = sourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object destId_ = "";
+    /**
+     * <code>string destId = 3;</code>
+     * @return The destId.
+     */
+    @java.lang.Override
+    public java.lang.String getDestId() {
+      java.lang.Object ref = destId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string destId = 3;</code>
+     * @return The bytes for destId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestIdBytes() {
+      java.lang.Object ref = destId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object content_ = "";
     /**
-     * <code>string content = 3;</code>
+     * <code>string content = 4;</code>
      * @return The content.
      */
     @java.lang.Override
@@ -139,7 +438,7 @@ public final class IMMessageOuterClass {
       }
     }
     /**
-     * <code>string content = 3;</code>
+     * <code>string content = 4;</code>
      * @return The bytes for content.
      */
     @java.lang.Override
@@ -157,32 +456,39 @@ public final class IMMessageOuterClass {
       }
     }
 
-    public static final int TYPE_FIELD_NUMBER = 4;
+    public static final int TYPE_FIELD_NUMBER = 5;
     private int type_ = 0;
     /**
-     * <code>int32 type = 4;</code>
-     * @return The type.
+     * <code>.com.linseven.protobuf.MsgType type = 5;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override
-    public int getType() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
-
-    public static final int GROUPID_FIELD_NUMBER = 5;
-    private int groupId_ = 0;
     /**
-     * <code>int32 groupId = 5;</code>
-     * @return The groupId.
+     * <code>.com.linseven.protobuf.MsgType type = 5;</code>
+     * @return The type.
      */
-    @java.lang.Override
-    public int getGroupId() {
-      return groupId_;
+    @java.lang.Override public com.linseven.protobuf.IMMessageOuterClass.MsgType getType() {
+      com.linseven.protobuf.IMMessageOuterClass.MsgType result = com.linseven.protobuf.IMMessageOuterClass.MsgType.forNumber(type_);
+      return result == null ? com.linseven.protobuf.IMMessageOuterClass.MsgType.UNRECOGNIZED : result;
     }
 
-    public static final int SENDTIME_FIELD_NUMBER = 6;
+    public static final int SUBTYPE_FIELD_NUMBER = 6;
+    private int subType_ = 0;
+    /**
+     * <code>int32 subType = 6;</code>
+     * @return The subType.
+     */
+    @java.lang.Override
+    public int getSubType() {
+      return subType_;
+    }
+
+    public static final int SENDTIME_FIELD_NUMBER = 7;
     private long sendTime_ = 0L;
     /**
-     * <code>int64 sendTime = 6;</code>
+     * <code>int64 sendTime = 7;</code>
      * @return The sendTime.
      */
     @java.lang.Override
@@ -204,23 +510,26 @@ public final class IMMessageOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (sourceUserId_ != 0) {
-        output.writeInt32(1, sourceUserId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msgId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, msgId_);
       }
-      if (destUserId_ != 0) {
-        output.writeInt32(2, destUserId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, destId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, content_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, content_);
       }
-      if (type_ != 0) {
-        output.writeInt32(4, type_);
+      if (type_ != com.linseven.protobuf.IMMessageOuterClass.MsgType.text.getNumber()) {
+        output.writeEnum(5, type_);
       }
-      if (groupId_ != 0) {
-        output.writeInt32(5, groupId_);
+      if (subType_ != 0) {
+        output.writeInt32(6, subType_);
       }
       if (sendTime_ != 0L) {
-        output.writeInt64(6, sendTime_);
+        output.writeInt64(7, sendTime_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -231,28 +540,29 @@ public final class IMMessageOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (sourceUserId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, sourceUserId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msgId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, msgId_);
       }
-      if (destUserId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, destUserId_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, destId_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, content_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, content_);
       }
-      if (type_ != 0) {
+      if (type_ != com.linseven.protobuf.IMMessageOuterClass.MsgType.text.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, type_);
+          .computeEnumSize(5, type_);
       }
-      if (groupId_ != 0) {
+      if (subType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, groupId_);
+          .computeInt32Size(6, subType_);
       }
       if (sendTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, sendTime_);
+          .computeInt64Size(7, sendTime_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -269,16 +579,17 @@ public final class IMMessageOuterClass {
       }
       com.linseven.protobuf.IMMessageOuterClass.IMMessage other = (com.linseven.protobuf.IMMessageOuterClass.IMMessage) obj;
 
-      if (getSourceUserId()
-          != other.getSourceUserId()) return false;
-      if (getDestUserId()
-          != other.getDestUserId()) return false;
+      if (!getMsgId()
+          .equals(other.getMsgId())) return false;
+      if (!getSourceId()
+          .equals(other.getSourceId())) return false;
+      if (!getDestId()
+          .equals(other.getDestId())) return false;
       if (!getContent()
           .equals(other.getContent())) return false;
-      if (getType()
-          != other.getType()) return false;
-      if (getGroupId()
-          != other.getGroupId()) return false;
+      if (type_ != other.type_) return false;
+      if (getSubType()
+          != other.getSubType()) return false;
       if (getSendTime()
           != other.getSendTime()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -292,16 +603,18 @@ public final class IMMessageOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SOURCEUSERID_FIELD_NUMBER;
-      hash = (53 * hash) + getSourceUserId();
-      hash = (37 * hash) + DESTUSERID_FIELD_NUMBER;
-      hash = (53 * hash) + getDestUserId();
+      hash = (37 * hash) + MSGID_FIELD_NUMBER;
+      hash = (53 * hash) + getMsgId().hashCode();
+      hash = (37 * hash) + SOURCEID_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceId().hashCode();
+      hash = (37 * hash) + DESTID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestId().hashCode();
       hash = (37 * hash) + CONTENT_FIELD_NUMBER;
       hash = (53 * hash) + getContent().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType();
-      hash = (37 * hash) + GROUPID_FIELD_NUMBER;
-      hash = (53 * hash) + getGroupId();
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + SUBTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getSubType();
       hash = (37 * hash) + SENDTIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSendTime());
@@ -354,11 +667,13 @@ public final class IMMessageOuterClass {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.linseven.protobuf.IMMessageOuterClass.IMMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.linseven.protobuf.IMMessageOuterClass.IMMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -434,11 +749,12 @@ public final class IMMessageOuterClass {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        sourceUserId_ = 0;
-        destUserId_ = 0;
+        msgId_ = "";
+        sourceId_ = "";
+        destId_ = "";
         content_ = "";
         type_ = 0;
-        groupId_ = 0;
+        subType_ = 0;
         sendTime_ = 0L;
         return this;
       }
@@ -474,21 +790,24 @@ public final class IMMessageOuterClass {
       private void buildPartial0(com.linseven.protobuf.IMMessageOuterClass.IMMessage result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sourceUserId_ = sourceUserId_;
+          result.msgId_ = msgId_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.destUserId_ = destUserId_;
+          result.sourceId_ = sourceId_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.content_ = content_;
+          result.destId_ = destId_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.type_ = type_;
+          result.content_ = content_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.groupId_ = groupId_;
+          result.type_ = type_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.subType_ = subType_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
           result.sendTime_ = sendTime_;
         }
       }
@@ -505,22 +824,31 @@ public final class IMMessageOuterClass {
 
       public Builder mergeFrom(com.linseven.protobuf.IMMessageOuterClass.IMMessage other) {
         if (other == com.linseven.protobuf.IMMessageOuterClass.IMMessage.getDefaultInstance()) return this;
-        if (other.getSourceUserId() != 0) {
-          setSourceUserId(other.getSourceUserId());
+        if (!other.getMsgId().isEmpty()) {
+          msgId_ = other.msgId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
         }
-        if (other.getDestUserId() != 0) {
-          setDestUserId(other.getDestUserId());
+        if (!other.getSourceId().isEmpty()) {
+          sourceId_ = other.sourceId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
         }
-        if (!other.getContent().isEmpty()) {
-          content_ = other.content_;
+        if (!other.getDestId().isEmpty()) {
+          destId_ = other.destId_;
           bitField0_ |= 0x00000004;
           onChanged();
         }
-        if (other.getType() != 0) {
-          setType(other.getType());
+        if (!other.getContent().isEmpty()) {
+          content_ = other.content_;
+          bitField0_ |= 0x00000008;
+          onChanged();
         }
-        if (other.getGroupId() != 0) {
-          setGroupId(other.getGroupId());
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.getSubType() != 0) {
+          setSubType(other.getSubType());
         }
         if (other.getSendTime() != 0L) {
           setSendTime(other.getSendTime());
@@ -551,36 +879,41 @@ public final class IMMessageOuterClass {
               case 0:
                 done = true;
                 break;
-              case 8: {
-                sourceUserId_ = input.readInt32();
+              case 10: {
+                msgId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 8
-              case 16: {
-                destUserId_ = input.readInt32();
+              } // case 10
+              case 18: {
+                sourceId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 16
+              } // case 18
               case 26: {
-                content_ = input.readStringRequireUtf8();
+                destId_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
-              case 32: {
-                type_ = input.readInt32();
+              case 34: {
+                content_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 32
+              } // case 34
               case 40: {
-                groupId_ = input.readInt32();
+                type_ = input.readEnum();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 48: {
-                sendTime_ = input.readInt64();
+                subType_ = input.readInt32();
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
+              case 56: {
+                sendTime_ = input.readInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -598,73 +931,225 @@ public final class IMMessageOuterClass {
       }
       private int bitField0_;
 
-      private int sourceUserId_ ;
+      private java.lang.Object msgId_ = "";
       /**
-       * <code>int32 sourceUserId = 1;</code>
-       * @return The sourceUserId.
+       * <code>string msgId = 1;</code>
+       * @return The msgId.
        */
-      @java.lang.Override
-      public int getSourceUserId() {
-        return sourceUserId_;
+      public java.lang.String getMsgId() {
+        java.lang.Object ref = msgId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          msgId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>int32 sourceUserId = 1;</code>
-       * @param value The sourceUserId to set.
+       * <code>string msgId = 1;</code>
+       * @return The bytes for msgId.
+       */
+      public com.google.protobuf.ByteString
+          getMsgIdBytes() {
+        java.lang.Object ref = msgId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          msgId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string msgId = 1;</code>
+       * @param value The msgId to set.
        * @return This builder for chaining.
        */
-      public Builder setSourceUserId(int value) {
-
-        sourceUserId_ = value;
+      public Builder setMsgId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        msgId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 sourceUserId = 1;</code>
+       * <code>string msgId = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearSourceUserId() {
+      public Builder clearMsgId() {
+        msgId_ = getDefaultInstance().getMsgId();
         bitField0_ = (bitField0_ & ~0x00000001);
-        sourceUserId_ = 0;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string msgId = 1;</code>
+       * @param value The bytes for msgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsgIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        msgId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
-      private int destUserId_ ;
+      private java.lang.Object sourceId_ = "";
       /**
-       * <code>int32 destUserId = 2;</code>
-       * @return The destUserId.
+       * <code>string sourceId = 2;</code>
+       * @return The sourceId.
        */
-      @java.lang.Override
-      public int getDestUserId() {
-        return destUserId_;
+      public java.lang.String getSourceId() {
+        java.lang.Object ref = sourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>int32 destUserId = 2;</code>
-       * @param value The destUserId to set.
+       * <code>string sourceId = 2;</code>
+       * @return The bytes for sourceId.
+       */
+      public com.google.protobuf.ByteString
+          getSourceIdBytes() {
+        java.lang.Object ref = sourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sourceId = 2;</code>
+       * @param value The sourceId to set.
        * @return This builder for chaining.
        */
-      public Builder setDestUserId(int value) {
-
-        destUserId_ = value;
+      public Builder setSourceId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 destUserId = 2;</code>
+       * <code>string sourceId = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearDestUserId() {
+      public Builder clearSourceId() {
+        sourceId_ = getDefaultInstance().getSourceId();
         bitField0_ = (bitField0_ & ~0x00000002);
-        destUserId_ = 0;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sourceId = 2;</code>
+       * @param value The bytes for sourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destId_ = "";
+      /**
+       * <code>string destId = 3;</code>
+       * @return The destId.
+       */
+      public java.lang.String getDestId() {
+        java.lang.Object ref = destId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string destId = 3;</code>
+       * @return The bytes for destId.
+       */
+      public com.google.protobuf.ByteString
+          getDestIdBytes() {
+        java.lang.Object ref = destId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string destId = 3;</code>
+       * @param value The destId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        destId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestId() {
+        destId_ = getDefaultInstance().getDestId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destId = 3;</code>
+       * @param value The bytes for destId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        destId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private java.lang.Object content_ = "";
       /**
-       * <code>string content = 3;</code>
+       * <code>string content = 4;</code>
        * @return The content.
        */
       public java.lang.String getContent() {
@@ -680,7 +1165,7 @@ public final class IMMessageOuterClass {
         }
       }
       /**
-       * <code>string content = 3;</code>
+       * <code>string content = 4;</code>
        * @return The bytes for content.
        */
       public com.google.protobuf.ByteString
@@ -697,7 +1182,7 @@ public final class IMMessageOuterClass {
         }
       }
       /**
-       * <code>string content = 3;</code>
+       * <code>string content = 4;</code>
        * @param value The content to set.
        * @return This builder for chaining.
        */
@@ -705,22 +1190,22 @@ public final class IMMessageOuterClass {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         content_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>string content = 3;</code>
+       * <code>string content = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearContent() {
         content_ = getDefaultInstance().getContent();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string content = 3;</code>
+       * <code>string content = 4;</code>
        * @param value The bytes for content to set.
        * @return This builder for chaining.
        */
@@ -729,78 +1214,99 @@ public final class IMMessageOuterClass {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         content_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-
-      private int type_ ;
-      /**
-       * <code>int32 type = 4;</code>
-       * @return The type.
-       */
-      @java.lang.Override
-      public int getType() {
-        return type_;
-      }
-      /**
-       * <code>int32 type = 4;</code>
-       * @param value The type to set.
-       * @return This builder for chaining.
-       */
-      public Builder setType(int value) {
-
-        type_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
-      /**
-       * <code>int32 type = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        type_ = 0;
-        onChanged();
-        return this;
-      }
 
-      private int groupId_ ;
+      private int type_ = 0;
       /**
-       * <code>int32 groupId = 5;</code>
-       * @return The groupId.
+       * <code>.com.linseven.protobuf.MsgType type = 5;</code>
+       * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override
-      public int getGroupId() {
-        return groupId_;
+      @java.lang.Override public int getTypeValue() {
+        return type_;
       }
       /**
-       * <code>int32 groupId = 5;</code>
-       * @param value The groupId to set.
+       * <code>.com.linseven.protobuf.MsgType type = 5;</code>
+       * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
-      public Builder setGroupId(int value) {
-
-        groupId_ = value;
+      public Builder setTypeValue(int value) {
+        type_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 groupId = 5;</code>
+       * <code>.com.linseven.protobuf.MsgType type = 5;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.linseven.protobuf.IMMessageOuterClass.MsgType getType() {
+        com.linseven.protobuf.IMMessageOuterClass.MsgType result = com.linseven.protobuf.IMMessageOuterClass.MsgType.forNumber(type_);
+        return result == null ? com.linseven.protobuf.IMMessageOuterClass.MsgType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.linseven.protobuf.MsgType type = 5;</code>
+       * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder clearGroupId() {
+      public Builder setType(com.linseven.protobuf.IMMessageOuterClass.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.linseven.protobuf.MsgType type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        groupId_ = 0;
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int subType_ ;
+      /**
+       * <code>int32 subType = 6;</code>
+       * @return The subType.
+       */
+      @java.lang.Override
+      public int getSubType() {
+        return subType_;
+      }
+      /**
+       * <code>int32 subType = 6;</code>
+       * @param value The subType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubType(int value) {
+
+        subType_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 subType = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubType() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        subType_ = 0;
         onChanged();
         return this;
       }
 
       private long sendTime_ ;
       /**
-       * <code>int64 sendTime = 6;</code>
+       * <code>int64 sendTime = 7;</code>
        * @return The sendTime.
        */
       @java.lang.Override
@@ -808,23 +1314,23 @@ public final class IMMessageOuterClass {
         return sendTime_;
       }
       /**
-       * <code>int64 sendTime = 6;</code>
+       * <code>int64 sendTime = 7;</code>
        * @param value The sendTime to set.
        * @return This builder for chaining.
        */
       public Builder setSendTime(long value) {
 
         sendTime_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 sendTime = 6;</code>
+       * <code>int64 sendTime = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearSendTime() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         sendTime_ = 0L;
         onChanged();
         return this;
@@ -908,10 +1414,14 @@ public final class IMMessageOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\"src/main/resources/IMMessage.proto\022\025co" +
-      "m.linseven.protobuf\"w\n\tIMMessage\022\024\n\014sour" +
-      "ceUserId\030\001 \001(\005\022\022\n\ndestUserId\030\002 \001(\005\022\017\n\007co" +
-      "ntent\030\003 \001(\t\022\014\n\004type\030\004 \001(\005\022\017\n\007groupId\030\005 \001" +
-      "(\005\022\020\n\010sendTime\030\006 \001(\003b\006proto3"
+      "m.linseven.protobuf\"\236\001\n\tIMMessage\022\r\n\005msg" +
+      "Id\030\001 \001(\t\022\020\n\010sourceId\030\002 \001(\t\022\016\n\006destId\030\003 \001" +
+      "(\t\022\017\n\007content\030\004 \001(\t\022,\n\004type\030\005 \001(\0162\036.com." +
+      "linseven.protobuf.MsgType\022\017\n\007subType\030\006 \001" +
+      "(\005\022\020\n\010sendTime\030\007 \001(\003*x\n\007MsgType\022\010\n\004text\020" +
+      "\000\022\t\n\005image\020\001\022\t\n\005audio\020\002\022\t\n\005video\020\003\022\013\n\007re" +
+      "dPack\020\004\022\010\n\004file\020\005\022\016\n\nnewMsgSync\020\006\022\016\n\nmak" +
+      "eFriend\020\007\022\013\n\007connect\020\010b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -922,7 +1432,7 @@ public final class IMMessageOuterClass {
     internal_static_com_linseven_protobuf_IMMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_linseven_protobuf_IMMessage_descriptor,
-        new java.lang.String[] { "SourceUserId", "DestUserId", "Content", "Type", "GroupId", "SendTime", });
+        new java.lang.String[] { "MsgId", "SourceId", "DestId", "Content", "Type", "SubType", "SendTime", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

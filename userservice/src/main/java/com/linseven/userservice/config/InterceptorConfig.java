@@ -30,6 +30,7 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
         registry.addInterceptor(getJwtInterceptor())
                 .addPathPatterns("/**")
                 .excludePathPatterns("/login")
+                .excludePathPatterns("/signUp")
                 .excludePathPatterns("/favicon.ico");
     }
 

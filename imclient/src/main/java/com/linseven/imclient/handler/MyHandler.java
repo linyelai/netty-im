@@ -13,7 +13,6 @@ public class MyHandler extends ChannelInboundHandlerAdapter { // (1)
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) { // (2)
         // Discard the received data silently.
-        System.out.println(msg);
        ctx.fireChannelRead(msg);
     }
 
