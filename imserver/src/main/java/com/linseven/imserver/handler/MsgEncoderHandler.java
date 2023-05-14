@@ -3,12 +3,14 @@ package com.linseven.imserver.handler;
 import com.linseven.protobuf.IMMessageOuterClass;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import org.springframework.stereotype.Component;
 
 /**
  * @author Tyrion
  * @version 1.0
  * @date 2023/3/9 18:05
  */
+@Component
 public class MsgEncoderHandler extends SimpleChannelInboundHandler<IMMessageOuterClass.IMMessage> {
 
     @Override

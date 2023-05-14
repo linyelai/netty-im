@@ -47,6 +47,10 @@ public class DataCenter {
     }
 
 
+    public String getUserId(ChannelHandlerContext ctx){
+        return  channelIdMapUserId.get(ctx.channel().id().toString());
+    }
+
     public void removeContext(ChannelHandlerContext ctx) {
 
         String userId = channelIdMapUserId.get(ctx.channel().id().toString());

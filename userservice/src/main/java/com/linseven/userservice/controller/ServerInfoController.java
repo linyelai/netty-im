@@ -2,10 +2,12 @@ package com.linseven.userservice.controller;
 
 import com.linseven.IMServerInfo;
 import com.linseven.userservice.service.IMServerInfoService;
+import com.linseven.userservice.utils.RedisUtil;
 import com.linseven.userservice.vo.UserVo;
 import org.apache.tomcat.jni.Thread;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +24,8 @@ public class ServerInfoController {
     private IMServerInfoService imServerInfoService;
     @Autowired
     private ThreadLocal<UserVo> threadLocal ;
+    @Autowired
+    private RedisUtil redisUtil;
 
     @GetMapping("/getServerInfo")
     public Response<IMServerInfo> getServerInfo(HttpServletRequest request) throws Exception {
@@ -34,6 +38,17 @@ public class ServerInfoController {
         response.setData(imServerInfo);
         threadLocal.remove();
         return response;
+
+    }
+
+    @GetMapping("/getUserOnlineIMServerInfo")
+    public Response<IMServerInfo> getUserOnlineIMServerInfo(@PathVariable("userId") String userId) throws Exception {
+
+        Response response = new Response();
+
+         IMServerInfo imServerInfo =(IMServerInfo) redisUtil.get(userId+":imServerInfo");
+         response.setData(imServerInfo);
+         return response;
 
     }
 }

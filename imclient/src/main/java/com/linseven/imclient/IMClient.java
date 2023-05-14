@@ -38,6 +38,7 @@ public class IMClient {
         UserService userService = new UserService();
         String token = userService.login(username,password);
         IMServerInfo imServerInfo = imServerInfoService.getIMServerInfo(token);
+        AppContext.getContext().setImServerInfo(imServerInfo);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {
@@ -50,7 +51,7 @@ public class IMClient {
             ChannelFuture f = b.connect(imServerInfo.getImserverIp(), imServerInfo.getImPort()).sync(); // (5)
             // Wait until the connection is closed.
             ConnectService connectService = new ConnectService();
-            connectService.connect(username);
+            connectService.connect(username,imServerInfo);
             new Thread(new MsgSender(username)).start();
             f.channel().closeFuture().sync();
         } catch (InterruptedException e) {

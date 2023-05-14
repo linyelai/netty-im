@@ -26,6 +26,8 @@ public class IMServer {
 
     @Autowired
     private ServiceDiscovery serviceDiscovery;
+    @Autowired
+    private ServerChannelInitializer serverChannelInitializer;
     private  int port =8082;
     EventLoopGroup boss = new NioEventLoopGroup();
     EventLoopGroup work = new NioEventLoopGroup();
@@ -37,7 +39,7 @@ public class IMServer {
         b.group(boss,work)
                 .channel(NioServerSocketChannel.class)
                 .localAddress(new InetSocketAddress("127.0.0.1",port))
-                .childHandler(new ServerChannelInitializer());
+                .childHandler(serverChannelInitializer);
         System.out.println("启动加载netty2");
         ChannelFuture channelFuturef = b.bind().sync();
         if (channelFuturef.isSuccess()){

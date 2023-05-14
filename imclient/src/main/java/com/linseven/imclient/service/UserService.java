@@ -1,6 +1,8 @@
 package com.linseven.imclient.service;
 
 import com.google.gson.Gson;
+import com.linseven.IMServerInfo;
+import com.linseven.imclient.IMServerInfoResponse;
 import com.linseven.imclient.TokenResponse;
 import okhttp3.*;
 
@@ -30,6 +32,29 @@ public class UserService {
 
         }
 
+
+    }
+
+
+    public IMServerInfo getUserOnlineIMServerInfo(String userId) throws IOException {
+
+        OkHttpClient client = new OkHttpClient();
+        FormBody.Builder builder = new FormBody.Builder();
+        String  endpoint = "http://127.0.0.1:3001/getUserOnlineIMServerInfo?userId="+userId;
+        Request request = new Request.Builder()
+                .url(endpoint)
+                .get()
+                .build();
+
+        try (Response response = client.newCall(request).execute()) {
+            String data =    response.body().string();
+
+            IMServerInfoResponse tokenResponse = new Gson().fromJson(data, IMServerInfoResponse.class);
+            IMServerInfo imServerInfo = tokenResponse.getData();
+            return imServerInfo;
+
+
+        }
 
     }
 }
