@@ -13,12 +13,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class MsgEncoderHandler extends SimpleChannelInboundHandler<IMMessageOuterClass.IMMessage> {
 
+
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, IMMessageOuterClass.IMMessage msg)
             throws Exception {
 
         // ctx.write(msg);
-        ctx.fireChannelActive();
+        ctx.fireChannelRead(msg);
 
     }
 

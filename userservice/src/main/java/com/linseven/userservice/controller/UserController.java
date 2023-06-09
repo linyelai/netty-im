@@ -34,6 +34,9 @@ public class UserController {
 
     private static final String AUTH = "authorization Bear";
 
+    @Autowired
+    private ThreadLocal<UserVo> threadLocal;
+
     @PostMapping("/login")
     public Response login(String username,String password){
 
@@ -83,6 +86,14 @@ public class UserController {
     public Response getIMServer(){
         Response response = new Response();
 
+        return response;
+    }
+
+    @GetMapping("/getUserInfo")
+    public Response<UserVo> getUserInfo(){
+        Response response = new Response();
+        UserVo userVo = threadLocal.get();
+        response.setData(userVo);
         return response;
     }
 }

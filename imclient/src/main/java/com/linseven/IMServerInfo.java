@@ -14,5 +14,6 @@ public class IMServerInfo {
     private Integer imPort;
     private String imWebServerIP;
     private Integer imWebPort;
+    private Integer userId;
 
 }

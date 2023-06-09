@@ -22,7 +22,7 @@ public class RegistryConfig {
     @Bean
     public ServiceDiscovery serviceRegistrar(){
 
-        CuratorFramework client = CuratorFrameworkFactory.newClient("127.0.0.1:2181", new ExponentialBackoffRetry(1000, 3));
+        CuratorFramework client = CuratorFrameworkFactory.newClient("127.0.0.1:2181", new ExponentialBackoffRetry(10000, 3));
         client.start();
         return ServiceDiscoveryBuilder.builder(IMServerInfo.class).client(client).basePath("/imserver").build();
 

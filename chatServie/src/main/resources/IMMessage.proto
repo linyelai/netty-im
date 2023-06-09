@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package com.linseven.protobuf;
+
+
+enum MsgType {
+  text = 0;
+  image = 1;
+  audio = 2;
+  video = 3;
+  redPack = 4;
+  file = 5;
+  newMsgSync = 6;
+  makeFriend = 7;
+  connect = 8;
+  ack = 9;
+}
+message IMMessage {
+
+    string msgId = 1;
+    string sourceId =2;
+    string  destId=3;
+    string content=4;
+    MsgType type=5;
+    int32 subType = 6;
+    int64 sendTime=7;
+
+
+}

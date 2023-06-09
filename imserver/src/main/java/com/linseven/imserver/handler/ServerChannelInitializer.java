@@ -41,7 +41,7 @@ public class ServerChannelInitializer extends ChannelInitializer<SocketChannel> 
         p.addLast(connectServerHandler);
         p.addLast(protobufVarint32LengthFieldPrepender);
         p.addLast(protobufEncoder);
-        p.addLast(msgEncoderHandler);
+        //p.addLast(msgEncoderHandler);
 
     }
 

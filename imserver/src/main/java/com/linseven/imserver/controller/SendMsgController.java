@@ -19,6 +19,7 @@ public class SendMsgController {
 
         List<Channel> channelList = DataCenter.getInstance().getChannels(destId);
         if(channelList==null){
+
             return false;
         }
         for(Channel channel:channelList){

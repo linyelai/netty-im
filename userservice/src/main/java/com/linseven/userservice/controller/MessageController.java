@@ -14,14 +14,14 @@ public class MessageController {
 
     @Autowired
     private MessageService messageService;
-    private ThreadLocal<UserVo> userVoThreadLocal = new ThreadLocal<>();
-
+    @Autowired
+    private ThreadLocal<UserVo> threadLocal;
 
     @GetMapping("/getUnReadMsg")
     public Response getUnReadMsg(){
 
         Response response = new Response();
-        UserVo userVo = userVoThreadLocal.get();
+        UserVo userVo = threadLocal.get();
         String userId = userVo.getUserId()+"";
         List<Message> messageList = messageService.findByUserId(userId);
         response.setData(messageList);

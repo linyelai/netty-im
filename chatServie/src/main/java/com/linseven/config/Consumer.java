@@ -20,7 +20,7 @@ public class Consumer {
     @Autowired
     private MessageService messageService;
 
-    @KafkaListener(topics = "unReadMsgTopic" )
+    //@KafkaListener(topics = "unReadMsgTopic" )
     public void consume(String messageJson) {
         log.info("接收到消息：" + messageJson);
         //保存到mongodb

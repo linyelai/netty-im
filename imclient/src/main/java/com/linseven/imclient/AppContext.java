@@ -12,6 +12,8 @@ public class AppContext {
 
     private IMServerInfo imServerInfo;
 
+    private String token;
+
     public IMServerInfo getImServerInfo() {
         return imServerInfo;
     }
@@ -37,7 +39,11 @@ public class AppContext {
         return this.channel;
     }
 
+    public String getToken() {
+        return token;
+    }
 
-
-
+    public void setToken(String token) {
+        this.token = token;
+    }
 }

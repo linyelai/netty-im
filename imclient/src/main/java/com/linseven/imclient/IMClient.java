@@ -39,6 +39,11 @@ public class IMClient {
         String token = userService.login(username,password);
         IMServerInfo imServerInfo = imServerInfoService.getIMServerInfo(token);
         AppContext.getContext().setImServerInfo(imServerInfo);
+        AppContext.getContext().setToken(token);
+        //读取用户id
+
+        //获取未读信息
+
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {

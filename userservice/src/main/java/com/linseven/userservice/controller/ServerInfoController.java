@@ -4,6 +4,7 @@ import com.linseven.IMServerInfo;
 import com.linseven.userservice.service.IMServerInfoService;
 import com.linseven.userservice.utils.RedisUtil;
 import com.linseven.userservice.vo.UserVo;
+import org.apache.ibatis.annotations.Param;
 import org.apache.tomcat.jni.Thread;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.websocket.server.PathParam;
 
 /**
  * @author Tyrion
@@ -42,7 +44,7 @@ public class ServerInfoController {
     }
 
     @GetMapping("/getUserOnlineIMServerInfo")
-    public Response<IMServerInfo> getUserOnlineIMServerInfo(@PathVariable("userId") String userId) throws Exception {
+    public Response<IMServerInfo> getUserOnlineIMServerInfo(@PathParam("userId") String userId) throws Exception {
 
         Response response = new Response();
 
