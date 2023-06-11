@@ -10,6 +10,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import org.apache.curator.x.discovery.ServiceDiscovery;
 import org.apache.curator.x.discovery.ServiceInstance;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -28,9 +29,13 @@ public class IMServer {
     private ServiceDiscovery serviceDiscovery;
     @Autowired
     private ServerChannelInitializer serverChannelInitializer;
-    private  int port =8082;
+    @Value("${imserver.port}")
+    private  int port ;
     EventLoopGroup boss = new NioEventLoopGroup();
     EventLoopGroup work = new NioEventLoopGroup();
+
+    @Value("${server.port}")
+    private int imwebport;
 
     @PostConstruct
     public void start() throws Exception {
@@ -46,7 +51,7 @@ public class IMServer {
             System.out.println("启动成功");
             IMServerInfo imServerInfo = new IMServerInfo();
             imServerInfo.setImPort(port);
-            imServerInfo.setImWebPort(8081);
+            imServerInfo.setImWebPort(imwebport);
             imServerInfo.setImserverIp("127.0.0.1");
             imServerInfo.setImWebServerIP("127.0.0.1");
             ServiceInstance serviceInstance =  ServiceInstance.builder().name("imserver").payload(imServerInfo).build();

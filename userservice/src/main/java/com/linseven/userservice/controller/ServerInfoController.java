@@ -1,5 +1,6 @@
 package com.linseven.userservice.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.linseven.IMServerInfo;
 import com.linseven.userservice.service.IMServerInfoService;
 import com.linseven.userservice.utils.RedisUtil;
@@ -44,13 +45,17 @@ public class ServerInfoController {
     }
 
     @GetMapping("/getUserOnlineIMServerInfo")
-    public Response<IMServerInfo> getUserOnlineIMServerInfo(@PathParam("userId") String userId) throws Exception {
+    public Response<IMServerInfo> getUserOnlineIMServerInfo(@PathParam("username") String username) throws Exception {
 
         Response response = new Response();
 
-         IMServerInfo imServerInfo =(IMServerInfo) redisUtil.get(userId+":imServerInfo");
-         response.setData(imServerInfo);
-         return response;
+        JSONObject data = (JSONObject)redisUtil.get(username+":imServerInfo");
+        if(data==null){
+            return response;
+        }
+        IMServerInfo imServerInfo = JSONObject.parseObject(data.toString(),IMServerInfo.class);
+        response.setData(imServerInfo);
+        return response;
 
     }
 }

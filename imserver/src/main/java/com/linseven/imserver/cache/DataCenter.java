@@ -55,6 +55,9 @@ public class DataCenter {
 
         String userId = channelIdMapUserId.get(ctx.channel().id().toString());
         List<Channel> channels = contextCache.get(userId);
+        if(channels==null||channels.size()==0){
+            return;
+        }
         Iterator<Channel> iterator = channels.iterator();
         while(iterator.hasNext()){
             Channel channel = iterator.next();

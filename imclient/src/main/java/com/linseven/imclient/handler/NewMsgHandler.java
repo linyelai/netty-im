@@ -16,12 +16,17 @@ import lombok.Synchronized;
 public class NewMsgHandler extends SimpleChannelInboundHandler<IMMessageOuterClass.IMMessage> {
 
 
+    private String username;
+    public  NewMsgHandler(String username){
+        this.username = username;
+    }
 
 
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) {
 
-        AppContext.getContext().setChannel(ctx.channel());
+       // AppContext.getContext().setChannel(ctx.channel());
+        AppContext.getContext().setChannel(username,ctx.channel());
     }
 
     @Override
@@ -31,12 +36,13 @@ public class NewMsgHandler extends SimpleChannelInboundHandler<IMMessageOuterCla
 
         IMMessageOuterClass.MsgType msgType = msg.getType();
         if(msgType.equals(IMMessageOuterClass.MsgType.ack)){
-            synchronized (AppContext.class) {
-                AppContext.getContext().notify();
+            synchronized (ctx.channel()) {
+                ctx.channel().notify();
             }
         }else{
             System.out.println(msg.getContent());
         }
+
 
     }
 
@@ -46,4 +52,9 @@ public class NewMsgHandler extends SimpleChannelInboundHandler<IMMessageOuterCla
         ctx.close();
     }
 
+    @Override
+    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+        super.channelInactive(ctx);
+        System.out.println("inactive...");
+    }
 }

@@ -1,4 +1,10 @@
 package com.linseven.imclient.response;
 
-public class CommonResult {
+import lombok.Data;
+
+@Data
+public class CommonResult<T> {
+    private T data;
+    private String errorMsg;
+    private int errorCode =0;
 }

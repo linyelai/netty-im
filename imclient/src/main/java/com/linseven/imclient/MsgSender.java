@@ -23,29 +23,32 @@ public class MsgSender implements Runnable {
     public void run() {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("target username");
-        String targetUserId = scanner.nextLine();
+
+        String targetUsername = ((Integer.valueOf(username)+1)%5+1000)+"";
         // get user whether online
         UserService userService = new UserService() ;
-        IMServerInfo friendInfo = userService.getUserOnlineIMServerInfo(targetUserId);
-        IMServerInfo ownerInfo = AppContext.getContext().getImServerInfo();
+        String token = AppContext.getContext().getToken(username);
+        IMServerInfo friendInfo = userService.getUserOnlineIMServerInfo(targetUsername,token);
+        IMServerInfo ownerInfo = AppContext.getContext().getIMServerInfo(username);
+       // String username = AppContext.getContext().getCurrentUser().getUsername();
 
         while(true){
 
-            String msg = scanner.nextLine();
-            IMMessageOuterClass.IMMessage imMessage = IMMessageOuterClass.IMMessage.newBuilder().setType(IMMessageOuterClass.MsgType.text).setDestId(targetUserId).setContent(msg).setSourceId(username).build();
-
+            if(friendInfo==null){
+                friendInfo = userService.getUserOnlineIMServerInfo(targetUsername,token);
+            }
+            String msg = "hello "+targetUsername+",i am "+username;
+            IMMessageOuterClass.IMMessage imMessage = IMMessageOuterClass.IMMessage.newBuilder().setType(IMMessageOuterClass.MsgType.text).setDestId(targetUsername).setContent(msg).setSourceId(username).build();
+            Channel channel = AppContext.getContext().getChannel(username);
             try {
 
                 if(friendInfo==null){
                     sendUnReadMsg( imMessage);
                 }
                 else if (friendInfo.getImserverIp().equals(ownerInfo.getImserverIp()) && friendInfo.getImPort().equals(ownerInfo.getImPort())) {
-                    Channel channel = AppContext.getContext().getChannel();
+
                     channel.writeAndFlush(imMessage);
-                    synchronized (AppContext.class) {
-                        AppContext.class.wait();
-                    }
+
                 } else if (friendInfo != null) {
                     //发送到web translate
                     String ip = friendInfo.getImWebServerIP();
@@ -58,9 +61,13 @@ public class MsgSender implements Runnable {
                     }
 
                 }
+
+
+
             }catch (SendMsgFailedException e){
                 System.out.println("发送消息失败");
             }
+            Thread.sleep(10);
 
 
         }

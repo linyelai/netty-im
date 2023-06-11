@@ -11,7 +11,8 @@ public class ConnectService {
 
     public void connect(String userId, IMServerInfo imServerInfo){
 
-        Channel channel =  AppContext.getContext().getChannel();
+        System.out.println("connect:"+userId);
+        Channel channel =  AppContext.getContext().getChannel(userId);
 
        String content = new Gson().toJson(imServerInfo);
         IMMessageOuterClass.IMMessage imMessage = IMMessageOuterClass.IMMessage.newBuilder().setContent(content).setSourceId(userId).setType(IMMessageOuterClass.MsgType.connect).build();

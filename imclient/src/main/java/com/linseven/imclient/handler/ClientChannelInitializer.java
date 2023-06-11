@@ -16,15 +16,20 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
  */
 public class ClientChannelInitializer extends ChannelInitializer<SocketChannel> {
 
+    private String username;
+
+    public  ClientChannelInitializer(String username){
+        this.username = username;
+    }
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
         ChannelPipeline p = ch.pipeline();
-        p.addLast(new MyHandler());
+        //p.addLast(new MyHandler());
         p.addLast(new ProtobufVarint32FrameDecoder());
         p.addLast(new ProtobufDecoder(IMMessageOuterClass.IMMessage.getDefaultInstance()));
         p.addLast(new ProtobufVarint32LengthFieldPrepender());
         p.addLast(new ProtobufEncoder());
-        p.addLast(new NewMsgHandler());
+        p.addLast(new NewMsgHandler(this.username));
     }
 
 }

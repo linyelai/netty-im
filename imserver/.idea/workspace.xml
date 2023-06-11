@@ -2,206 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b6b9132-c543-4636-a33c-55b3cd411856" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../chatServie/src/main/java/com/linseven/config/MetricsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chatServie/src/main/resources/IMMessage.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/exception/SendMsgFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/request/UnReadMsgRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/service/MessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson2_fastjson2_2_0_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson2_fastjson2_extension_2_0_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_2_0_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_27_0_1_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_22_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_89_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_haproxy_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_memcache_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_mqtt_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_redis_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_smtp_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_stomp_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_xml_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_ssl_ocsp_4_1_89_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_classes_macos_4_1_89_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_aarch_64_4_1_89_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_89_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_89_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_kqueue_4_1_89_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_aarch_64_4_1_89_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_kqueue_osx_aarch_64_4_1_89_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_kqueue_osx_x86_64_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_rxtx_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_sctp_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_udt_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_5_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_framework_5_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_recipes_5_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_x_discovery_5_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_jute_3_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_18_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_vintage_junit_vintage_engine_5_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imserver.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/IMMessage.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/imserver.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/IMServerInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/IMServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/ImserverApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/cache/DataCenter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/config/HandlerConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/config/RedisConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/config/RegistryConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/controller/IndexController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/controller/SendMsgController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/enums/ClientStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/handler/ConnectServerHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/handler/MsgEncoderHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/handler/ServerChannelInitializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/model/Message.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/utils/RedisUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/protobuf/IMMessageOuterClass$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/protobuf/IMMessageOuterClass$IMMessage$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/protobuf/IMMessageOuterClass$IMMessage$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/protobuf/IMMessageOuterClass$IMMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/protobuf/IMMessageOuterClass$IMMessageOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/protobuf/IMMessageOuterClass$MsgType$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/protobuf/IMMessageOuterClass$MsgType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/protobuf/IMMessageOuterClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/linseven/protobuf/IMMessageOuterClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/linseven/imserver/ImserverApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatServie/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chatServie/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatServie/src/main/java/com/linseven/config/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatServie/src/main/java/com/linseven/config/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatServie/src/main/java/com/linseven/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatServie/src/main/java/com/linseven/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatServie/src/main/java/com/linseven/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatServie/src/main/java/com/linseven/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatServie/src/main/java/com/linseven/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatServie/src/main/java/com/linseven/model/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/MsgSender2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/model/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/response/CommonResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../imclient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../imclient/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/IMServerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/IMServerInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/AppContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/AppContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/ConnectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/ConnectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/IMClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/IMClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/MsgSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/MsgSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/handler/ClientChannelInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/handler/ClientChannelInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/handler/NewMsgHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/handler/NewMsgHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../imclient/src/main/java/com/linseven/imclient/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../imclient/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../imclient/src/test/java/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/config/RegistryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/config/RegistryConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/linseven/IMServerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linseven/IMServerInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/IMServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/IMServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/cache/DataCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/cache/DataCenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/config/HandlerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/config/HandlerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/controller/SendMsgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/controller/SendMsgController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/ConnectServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/ConnectServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/MsgEncoderHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/MsgEncoderHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/ServerChannelInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/ServerChannelInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/linseven/imserver/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/linseven/IMServerInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/linseven/IMServerInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/linseven/imserver/cache/DataCenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/cache/DataCenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/linseven/imserver/config/HandlerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/config/HandlerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/linseven/imserver/handler/ConnectServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/handler/ConnectServerHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/linseven/imserver/handler/ServerChannelInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/linseven/imserver/handler/ServerChannelInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../userservice/src/main/java/com/linseven/IMServerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../userservice/src/main/java/com/linseven/IMServerInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../userservice/src/main/java/com/linseven/userservice/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../userservice/src/main/java/com/linseven/userservice/controller/MessageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../userservice/src/main/java/com/linseven/userservice/controller/ServerInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../userservice/src/main/java/com/linseven/userservice/controller/ServerInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../userservice/src/main/java/com/linseven/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../userservice/src/main/java/com/linseven/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../userservice/src/test/java/com/linseven/userservice/UserserviceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../userservice/src/test/java/com/linseven/userservice/UserserviceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +68,7 @@
     <property name="GenProtobuf.javaLoc" value=".\" />
     <property name="GenProtobuf.quickGen" value="Python" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../imclient" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -247,14 +79,16 @@
       <recent name="com.linseven" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.linseven.imserver.model" />
       <recent name="com.linseven.imserver.utils" />
       <recent name="com.linseven.imserver.config" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="ImserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.8081">
+    <configuration name="8081" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.linseven.imserver.ImserverApplication" />
       <module name="imserver" />
+      <option name="VM_PARAMETERS" value="-Dimserver.port=8081 -Dserver.port=8082" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.linseven.imserver.*" />
@@ -265,9 +99,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="8083" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.linseven.imserver.ImserverApplication" />
+      <module name="imserver" />
+      <option name="VM_PARAMETERS" value="-Dimserver.port=8083 -Dserver.port=8084" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.8083" />
+      <item itemvalue="Application.8081" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ImserverApplication" />
+        <item itemvalue="Application.8081" />
       </list>
     </recent_temporary>
   </component>
@@ -304,50 +150,58 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1683857798874">
+    <state x="674" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1686468603879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1683857798874" />
+    <state x="674" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686468603879" />
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1686455335174">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1686455335174" />
     <state x="739" y="379" width="441" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1683863139141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="739" y="379" width="441" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1683863139141" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1683878186759">
+    <state width="512" height="466" key="DebuggerActiveHint" timestamp="1686453413982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1683878186759" />
-    <state width="1860" height="344" key="GridCell.Tab.0.bottom" timestamp="1686216174042">
+    <state width="512" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1686453413982" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1686386913894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686216174042" />
-    <state width="1860" height="344" key="GridCell.Tab.0.center" timestamp="1686216174042">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1686386913894" />
+    <state width="1877" height="462" key="GridCell.Tab.0.bottom" timestamp="1686479480313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686216174042" />
-    <state width="1860" height="344" key="GridCell.Tab.0.left" timestamp="1686216174042">
+    <state width="1877" height="462" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686479480313" />
+    <state width="1877" height="462" key="GridCell.Tab.0.center" timestamp="1686479480313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686216174042" />
-    <state width="1860" height="344" key="GridCell.Tab.0.right" timestamp="1686216174042">
+    <state width="1877" height="462" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686479480313" />
+    <state width="1877" height="462" key="GridCell.Tab.0.left" timestamp="1686479480313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686216174042" />
-    <state width="1860" height="344" key="GridCell.Tab.1.bottom" timestamp="1686216173883">
+    <state width="1877" height="462" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686479480313" />
+    <state width="1877" height="462" key="GridCell.Tab.0.right" timestamp="1686479480313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686216173883" />
-    <state width="1860" height="344" key="GridCell.Tab.1.center" timestamp="1686216173883">
+    <state width="1877" height="462" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686479480313" />
+    <state width="1877" height="462" key="GridCell.Tab.1.bottom" timestamp="1686479480314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686216173883" />
-    <state width="1860" height="344" key="GridCell.Tab.1.left" timestamp="1686216173882">
+    <state width="1877" height="462" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1686479480314" />
+    <state width="1877" height="462" key="GridCell.Tab.1.center" timestamp="1686479480314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686216173882" />
-    <state width="1860" height="344" key="GridCell.Tab.1.right" timestamp="1686216173883">
+    <state width="1877" height="462" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1686479480314" />
+    <state width="1877" height="462" key="GridCell.Tab.1.left" timestamp="1686479480313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686216173883" />
+    <state width="1877" height="462" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1686479480313" />
+    <state width="1877" height="462" key="GridCell.Tab.1.right" timestamp="1686479480314">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="462" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1686479480314" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1684049707157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -357,19 +211,36 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/ConnectServerHandler.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/MsgEncoderHandler.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.43.Final/netty-transport-4.1.43.Final-sources.jar!/io/netty/channel/AbstractChannel.java</url>
+          <line>573</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/ConnectServerHandler.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="2" />
+          <line>37</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/ConnectServerHandler.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/ServerChannelInitializer.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="3" />
+          <line>25</line>
+          <properties field="redisUtil" class="com.linseven.imserver.handler.ServerChannelInitializer" />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/linseven/imserver/handler/ServerChannelInitializer.java</url>
+          <line>27</line>
+          <properties field="connectServerHandler" class="com.linseven.imserver.handler.ServerChannelInitializer" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

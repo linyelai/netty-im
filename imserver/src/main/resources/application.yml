@@ -13,3 +13,5 @@ spring:
         max-idle: 10
         max-wait: 100000
     timeout: 5000
+imserver:
+  port: 8082

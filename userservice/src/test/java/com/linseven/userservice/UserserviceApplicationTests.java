@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
@@ -32,6 +33,19 @@ public class UserserviceApplicationTests {
 		IMServerInfo imServerInfo = imServerInfoService.getServerInfo("127.0.0.1","123");
         log.info("{}",imServerInfo);
         new ThreadLocal().get();
+	}
+
+	@Test
+	public void addUser(){
+
+		for(int i=1000;i<10000;i++){
+
+			UserPO userPO = new UserPO();
+			String password = new BCryptPasswordEncoder().encode("123456");
+			userPO.setPassword(password);
+			userPO.setUsername(i+1000+"");
+			userMapper.addUser(userPO);
+		}
 	}
 
 

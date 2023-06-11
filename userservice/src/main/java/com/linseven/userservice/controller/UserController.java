@@ -40,10 +40,12 @@ public class UserController {
     @PostMapping("/login")
     public Response login(String username,String password){
 
-        int userId = 1;
+
         UserVo userVo = new UserVo();
-        userVo.setUserId(userId);
         userVo.setUsername(username);
+        UserPO  userPO = userService.findByUsername(username);
+        System.out.println(username+","+userPO.getId());
+        userVo.setUserId(userPO.getId());
         String token = jwtUtil.Token(userVo);
         Response response = new Response();
         response.setData(token);
